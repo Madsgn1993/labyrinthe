@@ -23,5 +23,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'object-shorthand': 'off',
     'no-use-before-define': 'off',
+    'prefer-destructuring': 'off',
   },
 };
