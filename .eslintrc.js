@@ -24,5 +24,6 @@ module.exports = {
     'object-shorthand': 'off',
     'no-use-before-define': 'off',
     'prefer-destructuring': 'off',
+    'guard-for-in': 'off',
   },
 };

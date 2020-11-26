@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import $ from 'jquery';
 
 const gameWidth = 640;
 const gameHeight = 640;
@@ -46,10 +47,10 @@ function create() {
   const win = this.add.image(880, 570, 'Win');
 
   ennemis1 = this.physics.add.image(95, 170, 'Ennemie');
-  ennemis2 = this.add.image(310, 510, 'Ennemie');
-  ennemis3 = this.add.image(365, 150, 'Ennemie');
-  ennemis4 = this.add.image(755, 200, 'Ennemie');
-  ennemis5 = this.add.image(560, 370, 'Ennemie');
+  ennemis2 = this.physics.add.image(310, 510, 'Ennemie');
+  ennemis3 = this.physics.add.image(365, 150, 'Ennemie');
+  ennemis4 = this.physics.add.image(755, 200, 'Ennemie');
+  ennemis5 = this.physics.add.image(560, 370, 'Ennemie');
 
   // Fog of war
   const shape = this.make.graphics();
@@ -122,9 +123,15 @@ function create() {
 function update() {
   if (this.physics) {
     const ennemies = [ennemis1, ennemis2, ennemis3, ennemis4, ennemis5];
-    const isOverlapping = ennemies.some((ennemy) => this.physics.overlap(player, ennemy));
-    if (isOverlapping) {
-      game.scene.pause('default');
+    for (const ennemy of ennemies) {
+      console.log(ennemy);
+      const isOverlapping = this.physics.overlap(player, ennemy);
+      if (isOverlapping) {
+        $('.modal').modal({ backdrop: 'static', keyboard: false }).modal('show');
+        $('.modal').one('hidden.bs.modal', function () {
+          ennemy.destroy();
+        });
+      }
     }
   }
 }
