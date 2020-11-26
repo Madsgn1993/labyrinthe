@@ -124,7 +124,6 @@ function update() {
   if (this.physics) {
     const ennemies = [ennemis1, ennemis2, ennemis3, ennemis4, ennemis5];
     for (const ennemy of ennemies) {
-      console.log(ennemy);
       const isOverlapping = this.physics.overlap(player, ennemy);
       if (isOverlapping) {
         $('.modal').modal({ backdrop: 'static', keyboard: false }).modal('show');
