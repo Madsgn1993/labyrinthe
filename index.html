@@ -5,12 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Empty parcel project</title>
   </head>
+<<<<<<< HEAD
   <body>
     <!--  -->  
       <div id="acceuille">
 
         <button id="btnGo">Allons faire un tour dans le labyrinthe</button>
       </div>
+=======
+  <body class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#"><img src="static/img/logo1.png" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><img src="static/img/small.ico"> 4-6 ANS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="static/img/medium.ico"> 7-10 ANS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" id="link"><img src="static/img/big.ico"> 10-14 ANS</a>
+                </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <img src="static/img/boy.png">TOUT ÂGE</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+  
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+  </header>
+  <div id="game">
+
+  </div>
+
+>>>>>>> 5b34aaedd84c63873e9dfc0c98b214f9c5048a2e
     <div class="modal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -26,18 +74,22 @@
               <div id="quiz"></div>
             </main>
           </div>
-          <div class="modal-footer">
-            <footer>
-              <div id="clockdiv">
-                <div class="smalltext">
-                  Chrono :<span class="seconds"></span>
-                </div>
-              </div>
-            </footer>
-          </div>
+          
         </div>
       </div>
     </div>
+   
+      <div id="clockdiv" class="clock">
+          <div class="smalltext">Chrono :
+            <span class="seconds"></span>
+          </div>
+        
+      </div>
+      <div id="acceuille">
+
+        <button id="btnGo">Allons faire un tour dans le labyrinthe</button>
+      </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
