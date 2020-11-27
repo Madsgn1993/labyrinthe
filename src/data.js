@@ -1,6 +1,14 @@
 export const myQuestions = [
   {
-    question: '(true AND false) OR true',
+    question: 'true AND false',
+    answers: {
+      a: 'true',
+      b: 'false',
+    },
+    correctAnswer: 'false',
+  },
+  {
+    question: 'true || false',
     answers: {
       a: 'true',
       b: 'false',
@@ -8,7 +16,7 @@ export const myQuestions = [
     correctAnswer: 'true',
   },
   {
-    question: 'Node.js is a JavaScript package manager?',
+    question: ' true && false',
     answers: {
       a: 'true',
       b: 'false',
@@ -16,7 +24,7 @@ export const myQuestions = [
     correctAnswer: 'false',
   },
   {
-    question: ' To ensure code quality can you use the tool jQuery?',
+    question: 'Html est le language qui permet de rajouter du style à notre page web ',
     answers: {
       a: 'true',
       b: 'false',
@@ -24,7 +32,22 @@ export const myQuestions = [
     correctAnswer: 'false',
   },
   {
-    question: 'The <body> section is the correct place to insert a JavaScript?',
+    question: 'Css est le language qui permet de crée le squelette de notre page web ',
+      a: 'true',
+      b: 'false',
+    },
+    correctAnswer : 'false',
+  },
+  {
+    question: "Est ce qu'un algorithme peut être comparer à une recette de cuisine ?",
+    answers: {
+      a: 'true',
+      b: 'false',
+    },
+    correctAnswer: 'true',
+  },
+  {
+    question: "Le binaire est fait de 4 et de 2 ",
     answers: {
       a: 'true',
       b: 'false',
@@ -32,19 +55,22 @@ export const myQuestions = [
     correctAnswer: 'false',
   },
   {
-    question: 'Un flamant rose pèse quatre kilogrammes quand il se tient debout sur deux pattes. Combien de kilogrammes pèsera-t-il s\'il lève une patte ?',
+    question: "Le premier language de programmation est Google",
     answers: {
-      a: '2kg',
-      b: '4kg',
+      a: 'true',
+      b: 'false',
     },
-    correctAnswer: '4kg',
+    correctAnswer: 'false',
   },
   {
-    question: 'Tu participes à une course cycliste. A un moment donné, tu doubles le deuxième. Tu deviens...',
+    question: "Internet est indispensable pour coder",
     answers: {
-      a: 'Premier',
-      b: 'Deuxième',
+      a: 'true',
+      b: 'false',
     },
-    correctAnswer: 'Deuxième',
-  },
+    correctAnswer: 'false',
+  }
 ];
+
+
+export const musiqueGameOver = ['songGameOver.mp3'];
