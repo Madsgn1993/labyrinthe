@@ -1,11 +1,39 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "node_modules/bootstrap/scss/bootstrap";
 .logo{
-    width: 70px;
-    height: 50px;
+    width: 60px;
+    height: 30px;
   }
   .container{
     background-image: url('static/img/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
+.clock{
+  width: 150px;
+  height: 50px;
+  background-color: rgb(212, 83, 36);
+  float: right;
+  border-radius: 20%;
+  padding: 23px 36 px;
+  margin-top: 30%;
+  display: none;
+}
+.smalltext{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  display: none;
+}
+canvas{
+  display: none;
+}
+#btnGo{
+  margin-top: 20%;
+  height: 100px;
+  background-image: url('static/img/71549750-kids-riddle-maze-puzzle-labyrinth-vector-illustration-labyrinth-game-for-brain-educational-game-pres.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}

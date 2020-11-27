@@ -38,35 +38,6 @@ export function buildQuiz() {
     quiz.innerHTML = '';
   }, 5000); */
   // TIMER
-  function getTimeRemaining(endtime) {
-    const total = Date.parse(endtime) - Date.parse(new Date());
-    const seconds = Math.floor((total / 1000) % 60);
-    return {
-      total,
-      seconds,
-    };
-  }
-
-  function initializeClock(id, endtime) {
-    const clock = document.getElementById(id);
-    const secondsSpan = clock.querySelector('.seconds');
-
-    function updateClock() {
-      const t = getTimeRemaining(endtime);
-
-      secondsSpan.innerHTML = `0${t.seconds}`.slice(-2);
-
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-
-    updateClock();
-    const timeinterval = setInterval(updateClock, 1000);
-  }
-
-  const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
-  initializeClock('clockdiv', deadline);
   return currentQuestion;
 }
 
@@ -100,3 +71,33 @@ crossing.addEventListener('click', () => {
     });
   }, 500);
 });
+
+function getTimeRemaining(endtime) {
+  const total = Date.parse(endtime) - Date.parse(new Date());
+  const seconds = Math.floor((total / 1000) % 60);
+  return {
+    total,
+    seconds,
+  };
+}
+
+function initializeClock(id, endtime) {
+  const clock = document.getElementById(id);
+  const secondsSpan = clock.querySelector('.seconds');
+
+  function updateClock() {
+    const t = getTimeRemaining(endtime);
+
+    secondsSpan.innerHTML = `0${t.seconds}`.slice(-2);
+
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+
+  updateClock();
+  const timeinterval = setInterval(updateClock, 1000);
+}
+
+const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+initializeClock('clockdiv', deadline);
