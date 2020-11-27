@@ -33,10 +33,11 @@ export const myQuestions = [
   },
   {
     question: 'Css est le language qui permet de crée le squelette de notre page web ',
+    answers: {
       a: 'true',
       b: 'false',
     },
-    correctAnswer : 'false',
+    correctAnswer: 'false',
   },
   {
     question: "Est ce qu'un algorithme peut être comparer à une recette de cuisine ?",
@@ -47,7 +48,7 @@ export const myQuestions = [
     correctAnswer: 'true',
   },
   {
-    question: "Le binaire est fait de 4 et de 2 ",
+    question: 'Le binaire est fait de 4 et de 2 ',
     answers: {
       a: 'true',
       b: 'false',
@@ -55,7 +56,7 @@ export const myQuestions = [
     correctAnswer: 'false',
   },
   {
-    question: "Le premier language de programmation est Google",
+    question: 'Le premier language de programmation est Google',
     answers: {
       a: 'true',
       b: 'false',
@@ -63,14 +64,13 @@ export const myQuestions = [
     correctAnswer: 'false',
   },
   {
-    question: "Internet est indispensable pour coder",
+    question: 'Internet est indispensable pour coder',
     answers: {
       a: 'true',
       b: 'false',
     },
     correctAnswer: 'false',
-  }
+  },
 ];
-
 
 export const musiqueGameOver = ['songGameOver.mp3'];

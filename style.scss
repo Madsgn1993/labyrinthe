@@ -30,10 +30,28 @@ canvas{
   display: none;
 }
 #btnGo{
-  margin-top: 20%;
+  
   height: 100px;
   background-image: url('static/img/71549750-kids-riddle-maze-puzzle-labyrinth-vector-illustration-labyrinth-game-for-brain-educational-game-pres.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top:650px;
+  left:50%;
+  transform: translateX(-50%);
+  span{
+
+      background-color: rgba($color: #000000, $alpha: 0.8);
+      color: white;
+
+  }
   
+}
+
+.img_acceuil{
+
+
+  width: 1110px;
+
+
 }

@@ -13,5 +13,6 @@ $('#btnGo').on('click', function () {
   $('canvas').css('display', 'block');
   $('#clockdiv').css('display', 'block');
   $('.smalltext').css('display', 'block');
+  $('.img_acceuil').remove();
   $(this).remove();
 });

@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { myQuestions } from './data';
 
+let finalQuestions = myQuestions;
 const crossing = document.getElementById('croisement');
 const quiz = document.getElementById('quiz');
 
@@ -9,7 +10,8 @@ export function buildQuiz() {
   // variable pour stocker le contenu HTML
   const output = [];
 
-  const currentQuestion = myQuestions[Math.floor(Math.random() * myQuestions.length)];
+  const currentQuestion = finalQuestions[Math.floor(Math.random() * finalQuestions.length)];
+  finalQuestions = finalQuestions.filter((item) => item !== currentQuestion);
   const answers = [];
 
   for (const letter in currentQuestion.answers) {
@@ -92,6 +94,8 @@ function initializeClock(id, endtime) {
 
     if (t.total <= 0) {
       clearInterval(timeinterval);
+      const song = new Audio('songGameOver.mp3');
+      song.play();
     }
   }
 
